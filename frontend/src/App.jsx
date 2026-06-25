@@ -1,17 +1,13 @@
-function App() {
+import UploadResume from "./components/UploadResume";
 
-  return (
+function App(){
+  return(
     <div>
       <h1>
         Resume AI Assistant
       </h1>
-
-      <p>
-        Upload your resume and ask questions
-      </p>
-
+      <UploadResume />
     </div>
   )
 }
-
-export default App
+export default App;
