@@ -1,16 +1,173 @@
-# React + Vite
+## 📄 Resume AI Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered Resume Assistant that allows users to upload their resumes and interact with an intelligent chatbot to receive personalized responses based on the uploaded resume.
 
-Currently, two official plugins are available:
+This project is being built using React, Flask, MySQL, and the Gemini API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Frontend
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- Axios
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Backend
+
+- Python
+- Flask
+- Flask-CORS
+
+Database
+
+- MySQL (coming soon)
+
+AI
+
+- Google Gemini API (coming soon)
+
+PDF Processing
+
+- PyMuPDF
+
+---
+
+## ✨ Features
+
+✅ Completed
+
+- Flask backend setup
+- React + Vite frontend setup
+- REST API for resume upload
+- PDF upload from React frontend
+- CORS configuration
+- File storage in the backend "uploads/" directory
+- API testing setup using VS Code REST Client
+
+🚧 In Progress
+
+- Extract text from uploaded PDF
+- Store extracted resume data in MySQL
+- Integrate Gemini API for AI-powered responses
+- Chat interface
+- Resume-based question answering
+
+## 📌 Planned Features
+
+- User authentication (Login/Register)
+- Chat history
+- Resume analysis dashboard
+- Suggested interview questions
+- Skill extraction
+- Project extraction
+- Experience summary
+- Responsive UI
+- Dark mode
+
+---
+
+## 📂 Project Structure
+```
+resume-ai-assistant/
+│
+├── backend/
+│   ├── app.py
+│   ├── database.py
+│   ├── gemini.py
+│   ├── resume_parser.py
+│   ├── uploads/
+│   └── test.http
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── UploadResume.jsx
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   └── package.json
+│
+├── .gitignore
+└── README.md
+```
+---
+
+## ⚙️ Getting Started
+
+Clone the Repository
+```
+git clone https://github.com/Vaishnavi10706/Resume-AI-Assistant.git
+```
+Backend Setup
+```
+cd backend
+
+python -m venv venv
+```
+# Windows
+```
+venv\Scripts\activate
+
+pip install -r requirements.txt
+
+python app.py
+```
+The backend will start at:
+
+http://127.0.0.1:5000
+
+Frontend Setup
+```
+cd frontend
+
+npm install
+
+npm run dev
+```
+The frontend will start at:
+
+http://localhost:5173
+
+---
+
+## 📌 Current Workflow
+```
+User
+   │
+   ▼
+Select Resume (PDF)
+   │
+   ▼   
+React Frontend
+   │
+   ▼
+Flask Backend
+   │
+   ▼
+Store PDF in uploads
+```
+---
+
+## 🛣️ Roadmap
+
+- [x] Backend setup
+- [x] Frontend setup
+- [x] Resume upload API
+- [x] Resume upload UI
+- [ ] PDF text extraction
+- [ ] MySQL integration
+- [ ] Gemini API integration
+- [ ] AI chatbot
+- [ ] Resume analysis
+- [ ] Authentication
+- [ ] Chat history
+
+---
+
+## 👩‍💻 Author
+
+Vaishnavi
+
+GitHub: https://github.com/Vaishnavi10706
