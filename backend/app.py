@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import os
 from resume_parser import extract_text
+from database import save_resume
 
 app = Flask(__name__)
 CORS(app)
@@ -30,12 +31,14 @@ def upload_resume():
     )
 
     file.save(file_path)
-    
     resume_text = extract_text(file_path)
 
-    print("========== EXTRACTED RESUME ==========")
-    print(resume_text)
-    print("=====================================")
+    resume_id = save_resume(
+        file.filename,
+        resume_text
+    )
+
+    print(f"Resume saved successfully with ID: {resume_id}")
 
     return jsonify({
         "message": "Resume uploaded successfully",
