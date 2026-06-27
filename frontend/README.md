@@ -1,4 +1,4 @@
-📄 Resume AI Assistant
+## 📄 Resume AI Assistant
 
 An AI-powered Resume Assistant that allows users to upload their resumes and interact with an intelligent chatbot to receive personalized responses based on the uploaded resume.
 
@@ -6,7 +6,7 @@ This project is being built using React, Flask, MySQL, and the Gemini API.
 
 ---
 
-🚀 Tech Stack
+## 🚀 Tech Stack
 
 Frontend
 
@@ -34,7 +34,7 @@ PDF Processing
 
 ---
 
-✨ Features
+## ✨ Features
 
 ✅ Completed
 
@@ -54,7 +54,7 @@ PDF Processing
 - Chat interface
 - Resume-based question answering
 
-📌 Planned Features
+## 📌 Planned Features
 
 - User authentication (Login/Register)
 - Chat history
@@ -68,7 +68,7 @@ PDF Processing
 
 ---
 
-📂 Project Structure
+## 📂 Project Structure
 ```
 resume-ai-assistant/
 │
@@ -94,7 +94,7 @@ resume-ai-assistant/
 ```
 ---
 
-⚙️ Getting Started
+## ⚙️ Getting Started
 
 Clone the Repository
 ```
@@ -132,7 +132,7 @@ http://localhost:5173
 
 ---
 
-📌 Current Workflow
+## 📌 Current Workflow
 ```
 User
    │
@@ -150,7 +150,7 @@ Store PDF in uploads
 ```
 ---
 
-🛣️ Roadmap
+## 🛣️ Roadmap
 
 - [x] Backend setup
 - [x] Frontend setup
@@ -166,7 +166,7 @@ Store PDF in uploads
 
 ---
 
-👩‍💻 Author
+## 👩‍💻 Author
 
 Vaishnavi
 
