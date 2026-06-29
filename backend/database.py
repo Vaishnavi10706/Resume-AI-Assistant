@@ -25,3 +25,20 @@ def save_resume(filename, resume_text):
     cursor.close()
     connection.close()
     return inserted_id
+
+def get_latest_resume():
+    connection = get_connection()
+    cursor = connection.cursor()
+    query = """
+    SELECT resume_text
+    FROM resumes
+    ORDER BY id DESC
+    LIMIT 1
+    """
+    cursor.execute(query)
+    result = cursor.fetchone()
+    cursor.close()
+    connection.close()
+    if result:
+        return result[0]
+    return None

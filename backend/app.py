@@ -2,7 +2,8 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import os
 from resume_parser import extract_text
-from database import save_resume
+from database import save_resume, get_latest_resume
+from gemini import ask_gemini
 
 app = Flask(__name__)
 CORS(app)
@@ -16,35 +17,47 @@ def home():
 
 @app.route("/upload", methods=["POST"])
 def upload_resume():
-
     if "resume" not in request.files:
         return jsonify({"error": "No file uploaded"}), 400
-
     file = request.files["resume"]
-
     if file.filename == "":
         return jsonify({"error": "No file selected"}), 400
-
     file_path = os.path.join(
         UPLOAD_FOLDER,
         file.filename
     )
-
     file.save(file_path)
     resume_text = extract_text(file_path)
-
     resume_id = save_resume(
         file.filename,
         resume_text
     )
-
     print(f"Resume saved successfully with ID: {resume_id}")
-
     return jsonify({
         "message": "Resume uploaded successfully",
         "filename": file.filename
     })
 
+@app.route("/ask", methods=["POST"])
+def ask_question():
+    data = request.get_json()
+    question = data.get("question")
+    if not question:
+        return jsonify({
+            "error": "Question is required."
+        }), 400
+    resume_text = get_latest_resume()
+    if not resume_text:
+        return jsonify({
+            "error": "No resume found."
+        }), 404
+    answer = ask_gemini(
+        resume_text,
+        question
+    )
+    return jsonify({
+        "answer": answer
+    })
 
 if __name__ == "__main__":
     app.run(debug=True)
