@@ -1,17 +1,45 @@
-## 📄 Resume AI Assistant
+🤖 Resume AI Assistant
 
-An AI-powered Resume Assistant that allows users to upload their resumes and interact with an intelligent chatbot to receive personalized responses based on the uploaded resume.
-
-This project is being built using React, Flask, MySQL, and the Gemini API.
+An AI-powered web application that allows users to upload their resume and ask questions about it. The application uses Google Gemini AI to answer questions based only on the uploaded resume, making it useful for interview preparation and resume review.
 
 ---
 
-## 🚀 Tech Stack
+🚀 Features
+
+📄 Resume Upload
+
+- Upload resume in PDF format
+- Extracts text using PyMuPDF
+- Stores resume data in MySQL database
+
+🤖 AI Question Answering
+
+- Ask questions about your resume
+- AI answers only from the uploaded resume
+- Powered by Google Gemini API
+
+💻 Modern Frontend
+
+- Built with React and Vite
+- Styled using Tailwind CSS
+- Responsive and clean user interface
+
+🔧 Backend API
+
+- Flask REST API
+- Resume upload endpoint
+- AI question-answering endpoint
+- MySQL database integration
+
+---
+
+🛠️ Tech Stack
 
 Frontend
 
-- React
+- React 19
 - Vite
+- Tailwind CSS
 - Axios
 
 Backend
@@ -22,55 +50,21 @@ Backend
 
 Database
 
-- MySQL (coming soon)
+- MySQL
 
 AI
 
-- Google Gemini API (coming soon)
+- Google Gemini API
 
-PDF Processing
+Resume Parsing
 
-- PyMuPDF
-
----
-
-## ✨ Features
-
-✅ Completed
-
-- Flask backend setup
-- React + Vite frontend setup
-- REST API for resume upload
-- PDF upload from React frontend
-- CORS configuration
-- File storage in the backend "uploads/" directory
-- API testing setup using VS Code REST Client
-
-🚧 In Progress
-
-- Extract text from uploaded PDF
-- Store extracted resume data in MySQL
-- Integrate Gemini API for AI-powered responses
-- Chat interface
-- Resume-based question answering
-
-## 📌 Planned Features
-
-- User authentication (Login/Register)
-- Chat history
-- Resume analysis dashboard
-- Suggested interview questions
-- Skill extraction
-- Project extraction
-- Experience summary
-- Responsive UI
-- Dark mode
+- PyMuPDF (fitz)
 
 ---
 
-## 📂 Project Structure
+📂 Project Structure
 ```
-resume-ai-assistant/
+Resume-AI-Assistant/
 │
 ├── backend/
 │   ├── app.py
@@ -78,29 +72,32 @@ resume-ai-assistant/
 │   ├── gemini.py
 │   ├── resume_parser.py
 │   ├── uploads/
-│   └── test.http
+│   └── requirements.txt
 │
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
-│   │   │   └── UploadResume.jsx
+│   │   │   ├── Header.jsx
+│   │   │   ├── UploadResume.jsx
+│   │   │   └── ChatBox.jsx
+│   │   ├── services/
+│   │   │   └── api.js
 │   │   ├── App.jsx
-│   │   ├── main.jsx
 │   │   └── index.css
+│   │
 │   └── package.json
 │
-├── .gitignore
 └── README.md
 ```
 ---
 
-## ⚙️ Getting Started
+⚙️ Installation
 
-Clone the Repository
+1. Clone the repository
 ```
 git clone https://github.com/Vaishnavi10706/Resume-AI-Assistant.git
 ```
-Backend Setup
+2. Backend Setup
 ```
 cd backend
 
@@ -111,14 +108,23 @@ python -m venv venv
 venv\Scripts\activate
 
 pip install -r requirements.txt
+```
+Create a ".env" file inside the backend folder.
+```
+DB_HOST=localhost
+DB_USER=your_username
+DB_PASSWORD=your_password
+DB_NAME=resume_ai_assistant
 
+GEMINI_API_KEY=your_api_key
+```
+Start the Flask server.
+```
 python app.py
 ```
-The backend will start at:
+---
 
-http://127.0.0.1:5000
-
-Frontend Setup
+3. Frontend Setup
 ```
 cd frontend
 
@@ -126,47 +132,64 @@ npm install
 
 npm run dev
 ```
-The frontend will start at:
+---
 
-http://localhost:5173
+📡 API Endpoints
+
+Upload Resume
+
+POST /upload
+
+Uploads a PDF resume, extracts its text, and stores it in MySQL.
 
 ---
 
-## 📌 Current Workflow
-```
-User
-   │
-   ▼
-Select Resume (PDF)
-   │
-   ▼   
-React Frontend
-   │
-   ▼
-Flask Backend
-   │
-   ▼
-Store PDF in uploads
-```
----
+Ask AI
 
-## 🛣️ Roadmap
+POST /ask
 
-- [x] Backend setup
-- [x] Frontend setup
-- [x] Resume upload API
-- [x] Resume upload UI
-- [ ] PDF text extraction
-- [ ] MySQL integration
-- [ ] Gemini API integration
-- [ ] AI chatbot
-- [ ] Resume analysis
-- [ ] Authentication
-- [ ] Chat history
+Example Request
+
+{
+    "question": "Tell me about my projects."
+}
+
+Example Response
+
+{
+    "answer": "Based on your resume..."
+}
 
 ---
 
-## 👩‍💻 Author
+📌 Current Progress
+
+- ✅ React + Flask project setup
+- ✅ Resume PDF upload
+- ✅ Resume text extraction
+- ✅ MySQL database integration
+- ✅ Google Gemini AI integration
+- ✅ AI-powered question answering
+- ✅ REST API development
+- ✅ Tailwind CSS integration
+- ✅ Responsive upload interface
+
+---
+
+🚧 Upcoming Features
+
+- AI chat interface with chat bubbles
+- Conversation history
+- Loading animation
+- Drag & drop resume upload
+- Dark mode
+- Authentication
+- Resume management
+- Deployment
+
+---
+
+👩‍💻 Author
 
 Vaishnavi
 
