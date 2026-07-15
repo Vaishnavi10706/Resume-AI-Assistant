@@ -2,7 +2,13 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import os
 from resume_parser import extract_text
-from database import save_resume, get_latest_resume
+from database import (
+    save_resume,
+    get_latest_resume,
+    get_latest_resume_id,
+    save_chat,
+    get_chat_history
+)
 from gemini import ask_gemini
 
 app = Flask(__name__)
@@ -47,6 +53,7 @@ def ask_question():
             "error": "Question is required."
         }), 400
     resume_text = get_latest_resume()
+    resume_id = get_latest_resume_id()
     if not resume_text:
         return jsonify({
             "error": "No resume found."
@@ -55,9 +62,32 @@ def ask_question():
         resume_text,
         question
     )
+    save_chat(
+        resume_id,
+        question,
+        answer
+    )
     return jsonify({
         "answer": answer
     })
+
+@app.route("/chats", methods=["GET"])
+def get_chats():
+    resume_id = get_latest_resume_id()
+    if not resume_id:
+        return jsonify([])
+    chats = get_chat_history(resume_id)
+    messages = []
+    for question, answer in chats:
+        messages.append({
+            "sender": "user",
+            "text": question
+        })
+        messages.append({
+            "sender": "ai",
+            "text": answer
+        })
+    return jsonify(messages)
 
 if __name__ == "__main__":
     app.run(debug=True)

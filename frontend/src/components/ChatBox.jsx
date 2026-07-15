@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import api from "../services/api";
 import ChatMessage from "./ChatMessage";
 
@@ -6,6 +6,17 @@ function ChatBox() {
     const [question, setQuestion] = useState("");
     const [messages, setMessages] = useState([]);
     const [loading, setLoading] = useState(false);
+    useEffect(() => {
+    const loadChats = async () => {
+        try {
+            const response = await api.get("/chats");
+            setMessages(response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+    loadChats();
+}, []);
     const askQuestion = async () => {
         if (question.trim() === "") {
             return;
