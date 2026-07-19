@@ -6,7 +6,7 @@ An AI-powered Resume Assistant that allows users to upload a PDF resume and ask 
 
 **Frontend:** https://resume-ai-assistant-tan.vercel.app/
 
-**Backend API:** https://resume-ai-assistant-backend.onrender.com/
+**Backend:** https://resume-ai-assistant-backend.onrender.com/
 
 ## 📌 Features
 
