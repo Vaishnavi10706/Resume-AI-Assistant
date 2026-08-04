@@ -10,13 +10,13 @@ An AI-powered Resume Assistant that allows users to upload a PDF resume and ask 
 
 ## 📌 Features
 
-* 📄 Upload resume in PDF format
-* 🤖 Ask questions about your resume using AI
-* 🧠 AI answers only from the uploaded resume
-* 💾 Stores resume information in MySQL
-* 💬 Saves chat history for every uploaded resume
-* 🎨 Responsive React + Tailwind CSS interface
-* ☁️ Fully deployed using cloud services
+* Upload resume in PDF format
+* Ask questions about your resume using AI
+* AI answers only from the uploaded resume
+* Stores resume information in MySQL
+* Saves chat history for every uploaded resume
+* Responsive React + Tailwind CSS interface
+* Fully deployed using cloud services
 
 ---
 
@@ -216,8 +216,6 @@ Example:
 **Vaishnavi**
 
 GitHub: https://github.com/Vaishnavi10706
-
-LinkedIn: *(Add your LinkedIn profile link here)*
 
 ---
 
