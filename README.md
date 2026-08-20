@@ -1,14 +1,14 @@
-# 🤖 Resume AI Assistant
+# Resume AI Assistant
 
 An AI-powered Resume Assistant that allows users to upload a PDF resume and ask natural language questions about its contents. The application extracts text from the uploaded resume, stores it in a MySQL database, and uses Google's Gemini AI to generate context-aware answers based only on the uploaded resume.
 
-## 🚀 Live Demo
+## Live Demo
 
 **Frontend:** https://resume-ai-assistant-tan.vercel.app/
 
 **Backend:** https://resume-ai-assistant-backend.onrender.com/
 
-## 📌 Features
+## Features
 
 * Upload resume in PDF format
 * Ask questions about your resume using AI
@@ -20,7 +20,7 @@ An AI-powered Resume Assistant that allows users to upload a PDF resume and ask 
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```text
 React + Tailwind CSS (Vercel)
@@ -35,7 +35,7 @@ React + Tailwind CSS (Vercel)
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -67,7 +67,7 @@ React + Tailwind CSS (Vercel)
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 Resume-AI-Assistant/
@@ -90,7 +90,7 @@ Resume-AI-Assistant/
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 ### Clone the repository
 
@@ -147,7 +147,7 @@ npm run dev
 
 ---
 
-## 📌 API Endpoints
+## API Endpoints
 
 ### Upload Resume
 
@@ -183,7 +183,7 @@ Example Response
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 <img width="1576" height="720" alt="Screenshot 2026-07-16 214543" src="https://github.com/user-attachments/assets/bd570dcb-a96f-431f-bbc0-eb092a3d21f6" />
 
@@ -197,7 +197,7 @@ Example:
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
 * User Authentication
 * Multiple Resume Support
@@ -211,7 +211,7 @@ Example:
 
 ---
 
-## 👩‍💻 Author
+## Author
 
 **Vaishnavi**
 
