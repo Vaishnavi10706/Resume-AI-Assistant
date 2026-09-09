@@ -92,7 +92,7 @@ Resume-AI-Assistant/
 
 ## Installation
 
-### Clone the repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Vaishnavi10706/Resume-AI-Assistant.git
@@ -101,7 +101,7 @@ cd Resume-AI-Assistant
 
 ---
 
-### Backend Setup
+### 2. Backend Setup
 
 ```bash
 cd backend
@@ -114,7 +114,7 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Create a `.env` file inside the `backend` folder:
+### 3. Create a `.env` file inside the `backend` folder:
 
 ```env
 DB_HOST=localhost
@@ -127,7 +127,7 @@ DB_SSL=false
 GEMINI_API_KEY=your_api_key
 ```
 
-Run the backend:
+### 4. Run the backend:
 
 ```bash
 python app.py
@@ -135,7 +135,7 @@ python app.py
 
 ---
 
-### Frontend Setup
+### 5. Frontend Setup
 
 ```bash
 cd frontend
@@ -149,7 +149,7 @@ npm run dev
 
 ## API Endpoints
 
-### Upload Resume
+### 1. Upload Resume
 
 ```
 POST /upload
@@ -159,7 +159,7 @@ Uploads a PDF resume and stores the extracted text.
 
 ---
 
-### Ask Question
+### 2. Ask Question
 
 ```
 POST /ask
