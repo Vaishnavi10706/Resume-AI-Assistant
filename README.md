@@ -6,21 +6,21 @@ An AI-powered Resume Assistant that allows users to upload a PDF resume and ask 
 
 ## Live Demo
 
-**Frontend:** https://resume-ai-assistant-tan.vercel.app/
+**Frontend Demo Link:** https://resume-ai-assistant-tan.vercel.app/
 
-**Backend:** https://resume-ai-assistant-backend.onrender.com/
+**Backend Demo Link:** https://resume-ai-assistant-backend.onrender.com/
 
 ---
 
 ## Features
 
-* Upload resume in PDF format
-* Ask questions about your resume using AI
-* AI answers only from the uploaded resume
-* Stores resume information in MySQL
-* Saves chat history for every uploaded resume
-* Responsive React + Tailwind CSS interface
-* Fully deployed using cloud services
+- Upload resume in PDF format
+- Ask questions about your resume using AI
+- AI answers only from the uploaded resume
+- Stores resume information in MySQL
+- Saves chat history for every uploaded resume
+- Responsive React + Tailwind CSS interface
+- Fully deployed using cloud services
 
 ---
 
@@ -43,31 +43,31 @@ React + Tailwind CSS (Vercel)
 
 ### Frontend
 
-* React
-* Vite
-* Tailwind CSS
-* Axios
+- React
+- Vite
+- Tailwind CSS
+- Axios
 
 ### Backend
 
-* Python
-* Flask
-* Flask-CORS
-* PyMuPDF
+- Python
+- Flask
+- Flask-CORS
+- PyMuPDF
 
 ### AI
 
-* Google Gemini API
+- Google Gemini API
 
 ### Database
 
-* MySQL
-* Aiven Cloud MySQL
+- MySQL
+- Aiven Cloud MySQL
 
 ### Deployment
 
-* Vercel
-* Render
+- Vercel
+- Render
 
 ---
 
