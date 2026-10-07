@@ -1,6 +1,6 @@
 # Resume AI Assistant
 
-An AI-powered Resume Assistant that allows users to upload a PDF resume and ask natural language questions about its contents. The application extracts text from the uploaded resume, stores it in a MySQL database, and uses Google's Gemini AI to generate context-aware answers based only on the uploaded resume.
+An AI-powered Resume Assistant that allows users to upload a PDF resume and ask natural language questions about its contents. The application extracts text from the uploaded resume, stores it in a MySQL database, and uses Google's Gemini AI to generate context aware answers based only on the uploaded resume.
 
 ---
 
@@ -39,7 +39,7 @@ React + Tailwind CSS (Vercel)
 
 ---
 
-## Tech Stack
+## Tech Stack:
 
 ### Frontend
 
@@ -219,7 +219,7 @@ Example:
 
 **Vaishnavi**
 
-GitHub: https://github.com/Vaishnavi10706
+**GitHub:** https://github.com/Vaishnavi10706
 
 ---
 
